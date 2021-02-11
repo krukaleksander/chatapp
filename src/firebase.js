@@ -14,4 +14,5 @@ const app = firebase.initializeApp({
 
 export const auth = app.auth();
 export const dbRefObject = firebase.database().ref().child('object');
+export const pureDataBase = firebase.database();
 export default app;
