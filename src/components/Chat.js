@@ -23,9 +23,9 @@ export default function Chat() {
             <Container>
                 <h1>Chat section</h1>
                 <Row>
-                    <Col xs={12} xs={{ order: 'last' }} md={4} lg={2} lg={{ order: 'first' }}><Rooms /></Col>
+                    <Col xs={{ order: 'last', span: 12 }} md={4} lg={{ order: 'first', span: 2 }}><Rooms /></Col>
                     <Col xs={12} md={8} lg={8}><ChatWindow /></Col>
-                    <Col xs={{ order: 'first' }} md={4} lg={2} lg={{ order: 'last' }}><PeopleList /></Col>
+                    <Col xs={{ order: 'first' }} md={4} lg={{ order: 'last', span: 2 }}><PeopleList /></Col>
                 </Row>
             </Container>
         </>
