@@ -14,23 +14,25 @@ const App = () => {
   return (
 
     <Container className='d-flex align-items-center justify-content-center' style={{ minHeight: '100vh' }}>
-      <div className="w-100" style={{ maxWidth: '400px' }}>
-        <Router>
-          <AppProvider>
-            <Switch>
+
+      <Router>
+        <AppProvider>
+          <Switch>
+            <PrivateRoute path="/chat" component={Chat} />
+            <div className="w-100" style={{ maxWidth: '400px' }}>
               <PrivateRoute exact path="/" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <PrivateRoute path="/chat" component={Chat} />
               <Route path='/signup' component={Signup} />
               <Route path='/login' component={Login} />
               <Route path='/forgot-password' component={ForgotPassword} />
-            </Switch>
-          </AppProvider>
-        </Router>
-      </div>
+            </div>
+          </Switch>
+        </AppProvider>
+      </Router>
+
     </Container>
     // 43:39
-
+    // echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
 
   )
 

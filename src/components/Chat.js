@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { pureDataBase, dbRefObject } from '../firebase';
 import PeopleList from './chat-components/PeopleList';
 import ChatWindow from './chat-components/ChatWindow';
@@ -19,11 +19,15 @@ export default function Chat() {
     // writeUserData('d121235', 'Olek', 'aleksander@onet.pl', 'https://onet.pl');
 
     return (
-        <Container>
-            <h1>Chat section</h1>
-            <PeopleList />
-            <ChatWindow />
-            <Rooms />
-        </Container>
+        <>
+            <Container>
+                <h1>Chat section</h1>
+                <Row>
+                    <Col xs={12} xs={{ order: 'last' }} md={4} lg={2} lg={{ order: 'first' }}><Rooms /></Col>
+                    <Col xs={12} md={8} lg={8}><ChatWindow /></Col>
+                    <Col xs={{ order: 'first' }} md={4} lg={2} lg={{ order: 'last' }}><PeopleList /></Col>
+                </Row>
+            </Container>
+        </>
     )
 }
