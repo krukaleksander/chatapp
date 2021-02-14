@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import 'firebase/auth';
-
+import 'firebase/firestore';
 
 
 const app = firebase.initializeApp({
@@ -13,6 +13,8 @@ const app = firebase.initializeApp({
 });
 
 export const auth = app.auth();
+export const firestore = firebase.firestore();
 export const dbRefObject = firebase.database().ref().child('object');
 export const pureDataBase = firebase.database();
+export const messagesRef = firestore.collection('messages');
 export default app;

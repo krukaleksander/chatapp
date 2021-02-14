@@ -1,9 +1,10 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import { pureDataBase, dbRefObject } from '../firebase';
+// import { dbRefObject } from '../firebase';
 import PeopleList from './chat-components/PeopleList';
 import ChatWindow from './chat-components/ChatWindow';
 import Rooms from './chat-components/Rooms';
+
 
 export default function Chat() {
     // dbRefObject.on('value', snap => console.log(snap.val()));

@@ -11,6 +11,8 @@ export function useAuth() {
 export default function AppProvider({ children }) {
     const [currentUser, setCurrentUser] = useState();
     const [loading, setLoading] = useState(true);
+
+
     function signup(email, password) {
         return auth.createUserWithEmailAndPassword(email, password);
     };
@@ -46,7 +48,7 @@ export default function AppProvider({ children }) {
         logout,
         resetPassword,
         updateEmail,
-        updatePassword
+        updatePassword,
     }
 
     return (
