@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PeopleList from './chat-components/PeopleList';
 import ChatWindow from './chat-components/ChatWindow';
 import Rooms from './chat-components/Rooms';
-
+import '../../src/Chat.css'
 
 export default function Chat() {
 
